@@ -1,145 +1,77 @@
-# 📊 Log Analyzer for Large Files
+# Project Title
 
-A Full-Stack Log Analyzer developed using **Spring Boot**, **MySQL**, **HTML**, **CSS**, **JavaScript**, and **Bootstrap**. The application allows users to upload large log files, parse log entries, store them in a MySQL database, and analyze them through an interactive dashboard.
-
----
-
-## 🚀 Features
-
-- Upload large log files (.txt)
-- Parse log entries automatically
-- Store logs in MySQL database
-- Display uploaded logs in a responsive table
-- Search logs by message
-- Filter logs by log level
-- View log statistics dashboard
-- Clear all stored logs
-- REST API tested using Bruno
+**Log Analyzer for Large Files**
 
 ---
 
-## 🛠️ Tech Stack
+# Objective
 
-### Backend
+The Log Analyzer for Large Files is a full-stack web application developed to simplify the analysis of large log files. The application allows users to upload log files, automatically parses each log entry, stores the data in a MySQL database, and provides useful statistics along with search and filtering capabilities. This project demonstrates backend development using Spring Boot, database integration with MySQL, REST API development, and frontend development using HTML, CSS, JavaScript, and Bootstrap.
+
+---
+
+# Technology Stack
+
+## Backend
 - Java 17
 - Spring Boot
 - Spring Data JPA
 - Maven
 
-### Frontend
+## Frontend
 - HTML5
 - CSS3
 - JavaScript
 - Bootstrap 5
 
-### Database
+## Database
 - MySQL
 
-### Tools
+## Tools
 - VS Code
 - MySQL Workbench
 - Bruno API Client
-- Git
-- GitHub
+- Git & GitHub
 
 ---
 
-## 📂 Project Structure
+# Setup Instructions
 
-```
-loganalyzer
-│
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   ├── controller
-│   │   │   ├── model
-│   │   │   ├── repository
-│   │   │   └── service
-│   │   ├── resources
-│   │   │   ├── static
-│   │   │   ├── templates
-│   │   │   └── application.properties
-│
-├── pom.xml
-└── README.md
-```
-
----
-
-## 📸 Application Preview
-
-### Dashboard
-
-![Dashboard](screenshots/dashboard.jpeg)
-
-### API Testing (Bruno)
-
-![Bruno](screenshots/bruno.png)
-
-### MySQL Database
-
-![Database](screenshots/mysql.png)
-
----
-
-## 📊 Sample Log Format
-
-```
-2026-07-11 10:15:30 INFO User logged in
-2026-07-11 10:16:12 ERROR Database connection failed
-2026-07-11 10:17:45 WARN Disk space low
-2026-07-11 10:18:22 INFO File uploaded successfully
-```
-
----
-
-## ⚙️ REST API Endpoints
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | `/api/logs/upload` | Upload log file |
-| GET | `/api/logs` | Fetch all logs |
-| GET | `/api/logs/stats` | Get log statistics |
-| DELETE | `/api/logs/clear` | Delete all logs |
-
----
-
-## ▶️ How to Run
-
-### Clone Repository
+## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/LogAnalyzer.git
+git clone https://github.com/Riddhi-Daspute/LogAnalyzer.git
 ```
 
-### Open Project
+## 2. Open the Project
 
-```
-Open in VS Code or IntelliJ IDEA
-```
+Open the project in **VS Code** or **IntelliJ IDEA**.
 
-### Configure Database
+## 3. Create Database
 
-Create a MySQL database named
+Create a MySQL database named:
 
-```
-loganalyzer
+```sql
+CREATE DATABASE loganalyzer;
 ```
 
-Update the database credentials inside
+## 4. Configure Database
 
-```
-application.properties
+Update the following properties inside `src/main/resources/application.properties`:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/loganalyzer
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
 ```
 
-### Run Application
+## 5. Run the Application
 
 ```bash
 mvn spring-boot:run
 ```
 
-Open
+## 6. Open in Browser
 
 ```
 http://localhost:8080
@@ -147,26 +79,43 @@ http://localhost:8080
 
 ---
 
-## 📈 Future Enhancements
+# Screenshots
 
-- Support multiple log file formats
-- Upload multiple files simultaneously
-- Charts and graphs for analytics
-- Date range filtering
-- Export logs to Excel or PDF
-- User authentication
-- Pagination for millions of records
+## Dashboard
+
+![Dashboard](screenshots/dashboard.jpeg)
+
+## API Testing (Bruno)
+
+![Bruno](screenshots/bruno.png)
+
+## MySQL Database
+
+![Database](screenshots/mysql.png)
 
 ---
 
-## 👩‍💻 Author
+# Live Link (Deployed Project)
+
+**Not Deployed (Runs Locally)**
+
+---
+
+# Features
+
+- Upload large log files
+- Parse log entries automatically
+- Store logs in MySQL database
+- View log statistics
+- Search log messages
+- Filter logs by log level
+- Display logs in a responsive table
+- Clear all stored logs
+
+---
+
+# Author
 
 **Riddhi Kuntal Daspute**
 
 MCA Student
-
----
-
-## 📄 License
-
-This project is developed for educational and learning purposes.
